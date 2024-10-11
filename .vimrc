@@ -92,8 +92,14 @@ Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Color scheme
+if (has("termguicolors"))
+    set termguicolors
+endif
 colorscheme gruvbox
 set background=dark
+
+" Force color scheme application
+autocmd VimEnter * colorscheme gruvbox
 
 " Plugin configurations
 " NERDTree
